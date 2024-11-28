@@ -26,80 +26,114 @@ Permitted properties
 
 Student CSS below the line
 -------------------------- */
-
-.grid-area {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
+.grid-area > div:nth-child(1) > p,
+.grid-area > div:nth-child(4) > p,
+.grid-area > div:nth-child(6) > p {
+    font-weight: bold;
 }
 
-.grid-area>* {
-    place-content: center;
-}
+    .grid-area{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-area > * {
+        place-content: center;
+    }
 
 
 @media screen and (min-width: 768px) {
+
+
     .grid-area {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "know area5 area3"
-            "area2 you you"
-            "area8 grid_area grid_area"
-            "area9 grid_area grid_area"
+        grid-template-areas: 
+            "know area5 area3" 
+            "area2 you you" 
+            "area8 grid_area grid_area" 
+            "area9 grid_area grid_area" 
             "area10 area10 area7";
     }
+    
+    /* Assign grid areas to children */
+    .grid-area > :nth-child(1) {
+        grid-area: you;
+    }
+    .grid-area > :nth-child(2) {
+        grid-area: area2;
+    }
+    .grid-area > :nth-child(3) {
+        grid-area: area3;
+    }
+    .grid-area > :nth-child(4) {
+        grid-area: know;
+    }
+    .grid-area > :nth-child(5) {
+        grid-area: area5;
+    }
+    .grid-area > :nth-child(6) {
+        grid-area: grid_area;
+    }
+    .grid-area > :nth-child(7) {
+        grid-area: area7;
+    }
+    .grid-area > :nth-child(8) {
+        grid-area: area8;
+    }
+    .grid-area > :nth-child(9) {
+        grid-area: area9;
+    }
+    .grid-area > :nth-child(10) {
+        grid-area: area10;
+    }
+    
 }
 
 @media screen and (min-width: 1024px) {
+
+
     .grid-area {
 
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1rem;
-        grid-template-areas:
-            "area3 grid_area grid_area area5"
-            "area2 grid_area grid_area area7"
-            "area8 area9 you you"
-            "area10 know know know";
+        grid-template-areas: 
+        "area3 grid_area grid_area area5" 
+        "area2 grid_area grid_area area7"
+        "area8 area9 you you"
+        "area10 know know know";
     }
-}
-
-/* Assign grid areas */
-.grid-area> :nth-child(1) {
-    grid-area: you;
-}
-
-.grid-area> :nth-child(2) {
-    grid-area: area2;
-}
-
-.grid-area> :nth-child(3) {
-    grid-area: area3;
-}
-
-.grid-area> :nth-child(4) {
-    grid-area: know;
-}
-
-.grid-area> :nth-child(5) {
-    grid-area: area5;
-}
-
-.grid-area> :nth-child(6) {
-    grid-area: grid_area;
-}
-
-.grid-area> :nth-child(7) {
-    grid-area: area7;
-}
-
-.grid-area> :nth-child(8) {
-    grid-area: area8;
-}
-
-.grid-area> :nth-child(9) {
-    grid-area: area9;
-}
-
-.grid-area> :nth-child(10) {
-    grid-area: area10;
+    
+    /* Assign grid areas to children */
+    .grid-area > :nth-child(1) {
+        grid-area: you;
+    }
+    .grid-area > :nth-child(2) {
+        grid-area: area2;
+    }
+    .grid-area > :nth-child(3) {
+        grid-area: area3;
+    }
+    .grid-area > :nth-child(4) {
+        grid-area: know;
+    }
+    .grid-area > :nth-child(5) {
+        grid-area: area5;
+    }
+    .grid-area > :nth-child(6) {
+        grid-area: grid_area;
+    }
+    .grid-area > :nth-child(7) {
+        grid-area: area7;
+    }
+    .grid-area > :nth-child(8) {
+        grid-area: area8;
+    }
+    .grid-area > :nth-child(9) {
+        grid-area: area9;
+    }
+    .grid-area > :nth-child(10) {
+        grid-area: area10;
+    }
+    
 }

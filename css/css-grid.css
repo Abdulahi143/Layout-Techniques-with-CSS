@@ -28,10 +28,19 @@ Permitted properties
 
 Student CSS below the line
 -------------------------- */
+
+.grid > div:nth-child(1) > p,
+.grid > div:nth-child(4) > p,
+.grid > div:nth-child(6) > p {
+    font-weight: bold;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+}
+.grid > * {
+    place-content: center;
 }
 
 .grid > :nth-child(1),
@@ -52,7 +61,6 @@ Student CSS below the line
 @media screen and (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(6, 1fr);
     }
 
     .grid > :nth-child(1) { 

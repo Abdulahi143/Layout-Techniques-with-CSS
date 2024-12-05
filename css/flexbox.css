@@ -29,6 +29,12 @@ Permitted properties
 
 Student CSS below the line
 -------------------------- */
+
+/* You = 2 */
+/* flexbox = 9 */
+/* know = 4 */
+
+/* Här har vi markerat så att alla text som, you, know och flex ska vara bold */
 .flex>div:nth-child(2)>p,
 .flex>div:nth-child(4)>p,
 .flex>div:nth-child(9)>p {
@@ -40,7 +46,7 @@ Student CSS below the line
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .flex>* {
@@ -54,100 +60,107 @@ Student CSS below the line
         flex-wrap: wrap;
     }
 
+    /* Alla elementer ska växa till lediga platsen och har basis på minst 15% */
     .flex>* {
-        flex-grow: 0;
-        flex-basis: 15%;
+        flex-grow: 1;
+    }
+
+    .flex>div:nth-child(1) {
         order: 1;
+        flex-basis: 15%;
+
     }
 
-    /* Specific child adjustments */
-    .flex> :nth-child(1) {
-        order: 0;
-    }
-
-    .flex> :nth-child(2) {
-        order: 2;
+    .flex>div:nth-child(2) {
+        order: 4;
         flex-basis: 61.5%;
     }
 
-    .flex> :nth-child(4) {
-        order: 0;
-        flex-grow: 1;
-        flex-basis: 62%;
+    .flex>div:nth-child(3) {
+        order: 3;
+        flex-basis: 15%;
+
     }
 
-    .flex> :nth-child(5) {
+    .flex>div:nth-child(4) {
         order: 2;
-        flex-basis: 11.6%;
+        flex-basis: 65%;
     }
 
-    .flex> :nth-child(6) {
-        order: 3;
-        flex-grow: 1;
+    .flex>div:nth-child(5) {
+        order: 5;
+        flex-basis: 11.8%;
     }
 
-    .flex> :nth-child(7) {
-        order: 3;
-        flex-basis: 11.5%;
+    .flex>div:nth-child(6) {
+        order: 6;
+        flex-basis: 21.5%;
     }
 
-    .flex> :nth-child(8) {
-        order: 3;
-        flex-basis: 21.9%;
+    .flex>div:nth-child(7) {
+        order: 7;
+        flex-basis: 11.1%;
     }
 
-    .flex> :nth-child(9) {
+    .flex>div:nth-child(8) {
+        order: 8;
+        flex-basis: 21%;
+    }
+
+    .flex>div:nth-child(9) {
         order: 9;
-        flex-grow: 1;
+        flex-basis: 61%;
     }
 }
 
 @media screen and (min-width: 1024px) {
 
     /* Adjustments for larger screens */
-    .flex> :nth-child(1) {
-        flex-basis: 52%;
+    .flex>div:nth-child(1) {
+        order: 1;
+        flex-basis:  51.7%;
     }
 
-    .flex> :nth-child(2) {
-        flex-basis: 30.3%;
+    .flex>div:nth-child(2) {
+        order: 4;
+        flex-basis: 30.1%;
+
     }
 
-    .flex> :nth-child(3) {
-        flex-basis: 7%;
+    .flex>div:nth-child(3) {
+        order: 3;
+        flex-basis: 6.8%;
     }
 
-    .flex> :nth-child(4) {
+    .flex>div:nth-child(4) {
+        flex-basis: 1%;
         order: 9;
-        flex-basis: 100%;
     }
 
-    .flex> :nth-child(5) {
-        order: 2;
-        flex-grow: 0;
+    .flex>div:nth-child(5) {
+        order: 5;
+        flex-basis: 10.7%;
+
+    }
+
+    .flex>div:nth-child(6) {
+        order: 6;
+        flex-basis: 20.1%;
+    }
+
+    .flex>div:nth-child(7) {
+        order: 7;
         flex-basis: 10.5%;
     }
 
-    .flex> :nth-child(6) {
-        flex-grow: 0;
+    .flex>div:nth-child(8) {
+        order: 8;
         flex-basis: 20.1%;
+
     }
 
-
-    .flex> :nth-child(7) {
-        flex-basis: 11%;
-    }
-
-    .flex> :nth-child(8) {
-        flex-basis: 20.1%;
-    }
-
-    .flex> :nth-child(9) {
-        order: 0;
-        flex-grow: 1;
-    }
-
-    .flex> :nth-child(4) {
-        flex-basis: 1%;
+    .flex>div:nth-child(9) {
+        order: 2;
+        flex-basis: 37.7%;
     }
 }

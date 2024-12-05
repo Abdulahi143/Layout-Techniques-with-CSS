@@ -39,6 +39,7 @@ Student CSS below the line
     }
 
     .grid-area > * {
+        display: grid;
         place-content: center;
     }
 

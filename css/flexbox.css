@@ -60,20 +60,19 @@ Student CSS below the line
         flex-wrap: wrap;
     }
 
-    /* Alla elementer ska växa till lediga platsen och har basis på minst 15% */
     .flex>* {
         flex-grow: 1;
     }
 
     .flex>div:nth-child(1) {
         order: 1;
-        flex-basis: 15%;
+        flex-basis: 14.75%;
 
     }
 
     .flex>div:nth-child(2) {
         order: 4;
-        flex-basis: 61.5%;
+        flex-basis: 61.4%;
     }
 
     .flex>div:nth-child(3) {
@@ -84,6 +83,7 @@ Student CSS below the line
 
     .flex>div:nth-child(4) {
         order: 2;
+        flex-grow: 0;
         flex-basis: 65%;
     }
 
@@ -118,7 +118,7 @@ Student CSS below the line
     /* Adjustments for larger screens */
     .flex>div:nth-child(1) {
         order: 1;
-        flex-basis:  51.7%;
+        flex-basis:  51.7%; 
     }
 
     .flex>div:nth-child(2) {
@@ -134,6 +134,7 @@ Student CSS below the line
 
     .flex>div:nth-child(4) {
         flex-basis: 1%;
+        flex-grow: 1;
         order: 9;
     }
 
@@ -161,6 +162,6 @@ Student CSS below the line
 
     .flex>div:nth-child(9) {
         order: 2;
-        flex-basis: 37.7%;
+        flex-basis: 37.5%; 
     }
 }
